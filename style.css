@@ -1,13 +1,13 @@
 /* ****** Customr Properties ****** */
 :root {
-  --first-color: #d90062;
-  --first-alpha-color: rgba(217, 0, 98, 0.75);
+  --first-color: #55CBCD;
+  --btn-color: #FCB9AA;
   --second-color: #14192d;
   --second-alpha-color: rgba(20, 25, 45, 0.75);
   --third-color: #501464;
   --third-alpha-color: rgba(80, 20, 100, 0.75);
   --white-color: #fff;
-  --gray-light-color: #f3f3f3;
+  --gray-light-color: #CCE2CB;
   --gray-color: #ccc;
   --gray-dark-color: #666;
   --black-color: #000;
@@ -90,6 +90,94 @@ p {
 }
 
 /* ****** Components ****** */
+
+/* ****** Contact Form ****** */
+.contact-form {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+}
+
+.contact-form > * {
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 0.85rem;
+  font-family: var(--font);
+}
+
+.contact-form input {
+  border: 0;
+  padding-left: 0;
+  border-bottom: thin solid var(--gray-dark-color); 
+}
+
+.contact-form textarea {
+  border: thin solid var(--gray-dark-color); 
+  resize: none;
+}
+
+.contact-form input[type="submit"] {
+  margin-top: 0;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+}
+
+.contact-form input[type="submit"]:hover {
+  opacity: 0.75;
+}
+
+.contact-form *::placeholder {
+  color: var(--gray-dark-color); 
+}
+
+.contact-form-response {
+  padding: 1rem; 
+  width: 400px;
+  text-align: center;
+  background-color: var(--white-color);
+}
+
+.contact-form-response svg {
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: var(--first-alpha-color);
+}
+
+.contact-form input[type="submit"] {
+  margin: 0; 
+}
+
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media screen and (min-width: 1024px) {
+  .contact-form {
+    display: grid;
+    grid-template-columns: repeat (2, 1fr);
+    column-gap: 1rem;
+  }
+
+  .contact-form input,
+.contact-form textarea {
+  font-size: 1rem;
+}
+
+.contact-form textarea,
+.contact-form-loader {
+  grid-column: span 2;
+}
+}
+
 /* ****** HeroImage ****** */
 .hero-image {
     background-image: var(--hero-image);
@@ -111,7 +199,8 @@ p {
 
 .hero-image-title {
     color: var(--hero-text-color); 
-    font-size: 7.5vw;
+    font-size: 6vw;
+    margin-bottom: 1.5rem;
 }
 /* ****** Menu ****** */
 .menu-btn {
@@ -262,13 +351,14 @@ progress::-moz-progress-bar {
 .btn {
     border-radius: 0.5rem;
     padding: 1rem;
+    margin-top: 1.5rem;
     display: inline-block;
     width: 200px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
-    color: var(--white-color);
-    background-color: var(--first-color);
+    color: var(--text-color);
+    background-color: var(--btn-color);
 }
 
 .container {
@@ -279,6 +369,7 @@ progress::-moz-progress-bar {
 
 .gray-scale {
   filter: grayscale(1);
+  border-radius: 50%;
 }
 
 .none {
@@ -297,7 +388,10 @@ progress::-moz-progress-bar {
   padding: .5rem 1rem;
   text-align: center;
   width: 250px;
+}
 
+.section-title > p{
+  padding: 0 1rem;
 }
 
 .text-center {
@@ -334,6 +428,36 @@ progress::-moz-progress-bar {
 /* ****** Site Styles ****** */
 .about > article {
   margin-bottom: 2rem; 
+  align-self: center;
+}
+
+.contact-card {
+  margin: 1rem auto; 
+  padding: 1rem;
+  width: 100%;
+  height: 23vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-card > svg {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--first-color);
+}
+
+.contact-card > small {
+  margin-top: -1rem;
+}
+
+.footer {
+  margin-bottom: var(--header-height); 
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--third-color);
 }
 
 .header {
@@ -407,6 +531,10 @@ progress::-moz-progress-bar {
   flex-direction: column;
 }
 
+.portfolio-modal img {
+  width: 50%;
+}
+
 .portfolio-modal h3 {
   border-bottom: medium solid var(--first-color);
   padding: .5rem 0;
@@ -424,21 +552,43 @@ small b {
 
 }
 
-.service-card {
+.skill-icon {
   margin: 1rem auto;
   padding: 1rem;
+  margin-bottom: 2.5rem;
   text-align: center;
+  width: 10rem;
+  height: 10rem;
 }
 
-.service-card h3 {
+
+.skill-icon h3 {
   color: var(--title-color);
 }
 
-.service-card svg {
-  margin-bottom: 1.25rem;
-  fill: var(--first-color);
+.social-media a {
+  padding: 0 0.4rem;
+  text-decoration: none;
 }
+
+.social-media svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 @media screen and (min-width: 768px) {
+  .about > figure {
+    margin: 0;
+    text-align: center;
+    order: -1;
+  }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    justify-content: space-between;
+  }
+
   .portfolio > .container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
@@ -458,10 +608,10 @@ small b {
     align-self: center
   }
 
-  .services > .container {
+  .skills > .container {
     display:grid;
     grid-template-columns: repeat(2, 45%);
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-content: center;
   }
 
@@ -473,9 +623,17 @@ small b {
 @media screen and (min-width: 1024px) {
   .about {
     display:grid;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: space-between;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-around;
     align-content: center;
+  }
+
+  .contact-cards {
+    grid-template-columns: repeat(4, 24%);
+  }
+
+  .footer {
+    margin-bottom: 0; 
   }
 
   .header {
@@ -493,7 +651,7 @@ small b {
     grid-column: span3;
   }
 
-  .services > .container {
+  .skills > .container {
     grid-template-columns: repeat(3, 30%);
   }
 
@@ -501,3 +659,5 @@ small b {
     grid-column: span 3;
   }
 }
+
+/* La curiosidad de conocer qué significaban todas las palabras que se encontraban al darle click por error al inspector del navegador, me llevó a descubrir que existe todo un mundo entrelazado de tecnologías y diseño que juntos pueden crear sitios web impresionantes. Desde entonces mi pasión por el desarrollo frontend ha crecido cada día, tomando como forma el objetivo de llegar a involucrarme de manera profesional y poder contribuir al desarrollo de sitios web geniales.   */
