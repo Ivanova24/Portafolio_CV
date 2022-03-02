@@ -105,32 +105,35 @@
     <section id="habilidades" class="skills section bg-gray-light">
       <div class="container full-lg-screen">
         <h2 class="section-title">Mis habilidades</h2>
+        <article class="service-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M20,3H4C2.897,3,2,3.897,2,5v14c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M4,19V7h16 l0.002,12H4z"></path>
+            <path d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z"></path>
+          </svg>
+          <h3>Conceptos de Diseño Web</h3>
+          <ul>
+            <li>Fundamentos y principios del Diseño UI</li>
+            <li>Diseño atómico</li>
+            <li>Sistemas de Diseño</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M20,3H4C2.897,3,2,3.897,2,5v14c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2V5C22,3.897,21.103,3,20,3z M4,19V7h16 l0.002,12H4z"></path>
+            <path d="M9.293 9.293L5.586 13 9.293 16.707 10.707 15.293 8.414 13 10.707 10.707zM14.707 9.293L13.293 10.707 15.586 13 13.293 15.293 14.707 16.707 18.414 13z"></path>
+          </svg>
+          <h3>Conceptos Frontend</h3>
+          <ul>
+            <li>Fundamentos y principios del Diseño UI</li>
+            <li>Diseño atómico</li>
+            <li>Sistemas de Diseño</li>
+          </ul>
+        </article>
 
-        <div class="skill-icon">
-          <img src="/assets/html-5.png" alt="HTML5">
-          <h3><i>HTML5</i></h3>
-        </div>
-        <div class="skill-icon">
-          <img src="/assets/css.png" alt="CSS3">
-          <h3><i>CSS3</i></h3>
-        </div>
-        <div class="skill-icon">
-          <img src="/assets/javascript.png" alt="javascript">
-          <h3><i>Javascript</i></h3>
-        </div>
-        <div class="skill-icon">
-          <img src="/assets/sass.png" alt="sass">
-          <h3><i>SASS</i></h3>
-        </div>
-        <div class="skill-icon">
-          <img src="/assets/bootstrap.png" alt="bootstrap">
-          <h3><i>Boostrap</i></h3>
-        </div>
-        <div class="skill-icon">
-          <img src="/assets/react.png" alt="bootstrap">
-          <h3><i>React js</i></h3>
-        </div>
+
+        
       </div>
+      <!-- <div class="skewed"></div> -->
     </section>
 
     <section id="portafolio" class="portfolio section">
@@ -313,46 +316,56 @@
         </article>
         <article class="modal" id="trabajo-5">
           <div class="modal-content">
-            <a href="#cerrar" class="modal-close">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <a href="#cerrar" class="modal-close" aria-label="close modal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z" />
               </svg>
             </a>
             <article class="portfolio-modal">
-              <img src="assets/portfolio-5.jpg" alt="Trabajo 5">
               <div class="portfolio-info">
-                <h3>Huddle</h3>
-                <p>Huddle reimagina la forma en que construimos comunidades. Tienes voz, pero también tu audiencia. Cree conexiones con sus usuarios a medida que participa en una discusión genuina.</p>
+                <h3>IndieBrew</h3>
+                <p>Con IndieBrew, obtenga fuentes personales de recursos en toda la web, incluidos Reddit, HackerNews, IndieHackers y mucho más. Con aplicaciones nativas para iOS y Android, acceder a su contenido seleccionado nunca ha sido tan fácil.</p>
                 <aside class="portfolio-details">
-                  <small><b>ENLACE:</b></small>
-                  <small><a href="https://huddle-landing-page-with-curved-sections-master-pink.vercel.app/#" target="_blank" rel="noopener">https://huddle.com</a></small>
-                  <small><b>CÓDIGO:</b></small>
-                  <small><a href="hhttps://github.com/Ivanova24/Pets" target="_blank" rel="noopener">Repositorio en GitHub</a></small>
+                  <h4>ENLACE:</h4>
+                  <a href="https://indie-brew-ochre.vercel.app/" target="_blank" rel="noopener">https://IndieBrew.com</a>
+                  <h4>CÓDIGO:</h4>
+                  <a href="https://github.com/Ivanova24/IndieBrew" target="_blank" rel="noopener">Repositorio en GitHub</a>
                 </aside>
+              </div>
+              <div class="portfolio-learn">
+                <h3>Aprendizaje</h3>
+                <p>Las propiedades personalizadas tienen un alcance local, pero también se heredan, por lo que se pueden comportar como variables globales, especialmente cuando se aplican al selector <code>:root</code>.</p>
+                <p>Se puede crear un nuevo contexto de apilamiento agregando un valor para las propiedades que crean una nueva capa compuesta como <code>opacity</code>, <code>will-chance</code> y <code>transform</code>.</p>
+                <p>JSX en React sigue las reglas XML y, por lo tanto, los elementos HTML deben cerrarse correctamente.</p>
               </div>
             </article>
           </div>
         </article>
         <article class="modal" id="trabajo-6">
           <div class="modal-content">
-            <a href="#cerrar" class="modal-close">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <a href="#cerrar" class="modal-close" aria-label="close modal">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M16.207,14.793l-1.414,1.414L12,13.414 l-2.793,2.793l-1.414-1.414L10.586,12L7.793,9.207l1.414-1.414L12,10.586l2.793-2.793l1.414,1.414L13.414,12L16.207,14.793z" />
               </svg>
             </a>
             <article class="portfolio-modal">
-              <img src="assets/portfolio-6.jpg" alt="Trabajo 6">
               <div class="portfolio-info">
-                <h3>Pets</h3>
-                <p>Si te encantan las mascotas y estás en busqueda de alguna, entonces estás en el sitio correcto. Y recuerda, la lealtad de un animal no conoce límites.</p>
+                <h3>Variety of Pets</h3>
+                <p>En nuestra tienda los animales son primero, por ello somos amantes de las mascotas y conocemos el fuerte vínculo emocional que existe entre una mascota y su familia. Si te encantan las mascotas y estás en busqueda de alguna, entonces estás en el sitio correcto.</p>
                 <aside class="portfolio-details">
-                  <small><b>ENLACE:</b></small>
-                  <small><a href="https://pets-pi.vercel.app/" target="_blank" rel="noopener">https://pets.com</a></small>
-                  <small><b>CÓDIGO:</b></small>
-                  <small><a href="https://github.com/Ivanova24/Pets" target="_blank" rel="noopener">Repositorio en GitHub</a></small>
+                  <h4>ENLACE:</h4>
+                  <a href="https://pets-pi.vercel.app/" target="_blank" rel="noopener">https://pets.com</a>
+                 <h4>CÓDIGO:</h4>
+                  <a href="https://github.com/Ivanova24/Pets" target="_blank" rel="noopener">Repositorio en GitHub</a>
                 </aside>
+              </div>
+              <div class="portfolio-learn">
+                <h3>Aprendizaje</h3>
+                <p>Siempre especificar el ancho y el alto de una imagen. Si no se especifican el ancho y el alto, la página web puede parpadear mientras se carga la imagen</p>
+                <p>Cuando se implementa grid o flexbox para cambiar el orden visual frente al orden DOM, siempre hay que tenga cuidado de no romper las expectativas en el orden de enfoque visual</p>
+                <p>El orden en el que se ejecutan las animaciones sobre una propiedad respetará la cascada de CSS.</p>
               </div>
             </article>
           </div>
