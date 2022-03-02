@@ -84,6 +84,10 @@ p {
   line-height: 1.6;
 }
 
+li {
+  margin-bottom: 0.7rem;
+}
+
 code {
   padding: 0.125em 0.25em;
   background: #ecede1;
@@ -568,18 +572,25 @@ code {
 
 }
 
-.skill-icon {
+.service-card {
   margin: 1rem auto;
   padding: 1rem;
-  margin-bottom: 2.5rem;
   text-align: center;
-  width: 10rem;
-  height: 10rem;
 }
 
-
-.skill-icon h3 {
+.service-card h3 {
   color: var(--title-color);
+}
+
+.card-list {
+  text-align: start;
+  list-style: none;
+  margin-top: 1.25rem;
+}
+
+.card {
+  text-align: center;
+  display: inline;
 }
 
 .social-media a {
@@ -617,10 +628,6 @@ code {
   .portfolio-info {
     margin-left: 1rem;
     align-self: center
-  }
-
-  .skills {
-    padding: 0 1rem;
   }
 
   .skills > .container {
@@ -666,9 +673,9 @@ code {
     grid-column: span3;
   }
 
-  .skills > .container {
+  /* .skills > .container {
     grid-template-columns: repeat(3, 30%);
-  }
+  } */
 
   .container .section-title {
     grid-column: span 3;
