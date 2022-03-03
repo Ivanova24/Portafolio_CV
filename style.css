@@ -5,6 +5,8 @@
   --second-alpha-color: rgba(20, 25, 45, 0.75);
   --third-color: #501464;
   --third-alpha-color: rgba(80, 20, 100, 0.75);
+  --bg-color: #15cdca2e;
+  --text-links: #0e6361;
   --white-color: #fff;
   --gray-light-color: #ccded8;
   --gray-color: #ccc;
@@ -128,8 +130,14 @@ code {
 }
 
 .data-form textarea {
-  border: thin solid var(--gray-dark-color); 
+  border: thin solid var(--gray-dark-color);
   resize: none;
+}
+
+.data-form input:focus,
+.data-form textarea:focus {
+  border: transparent;
+  outline: 0.3rem solid var(--first-color);
 }
 
 .data-form input[type="submit"] {
@@ -139,11 +147,11 @@ code {
 }
 
 .data-form *::placeholder {
-  color: var(--gray-dark-color); 
+  color: var(--gray-dark-color);
 }
 
 .contact-form-response {
-  padding: 1rem; 
+  padding: 1rem;
   width: 400px;
   text-align: center;
   background-color: var(--white-color);
@@ -157,7 +165,7 @@ code {
 }
 
 .data-form input[type="submit"] {
-  margin: 0; 
+  margin: 0;
 }
 
 .modal#gracias:target {
@@ -165,7 +173,7 @@ code {
   pointer-events: auto;
 }
 
-.btn[type="submit"]{
+.btn[type="submit"] {
   font-size: 16px;
   border: transparent;
   font-family: var(--font);
@@ -179,40 +187,40 @@ code {
     column-gap: 1rem;
   }
 
-.data-form input,
-.data-form textarea {
-  font-size: 1rem;
-}
+  .data-form input,
+  .data-form textarea {
+    font-size: 1rem;
+  }
 
-.data-form textarea,
-.contact-form-loader {
-  grid-column: span 2;
-}
+  .data-form textarea,
+  .contact-form-loader {
+    grid-column: span 2;
+  }
 }
 
 /* ****** HeroImage ****** */
 .hero-image {
-    background-image: var(--hero-image);
-    background-repeat: no-repeat; 
-    background-size: cover;
-    background-position: center;
-    background-attachment: var(--hero-attachment);
+  background-image: var(--hero-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: var(--hero-attachment);
 }
 
 .hero-image-opacity {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: var(--hero-opacity-color);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--hero-opacity-color);
 }
 
 .hero-image-title {
-    color: var(--hero-text-color); 
-    font-size: 6vw;
-    margin-bottom: 2rem;
+  color: var(--hero-text-color);
+  font-size: 6vw;
+  margin-bottom: 2rem;
 }
 /* ****** Menu ****** */
 .menu-btn {
@@ -259,35 +267,35 @@ code {
 }
 
 @media screen and (min-width: 1024px) {
-    .menu-btn {
-        display: none;
-    }
+  .menu-btn {
+    display: none;
+  }
 
-    .menu {
-        position: static;
-        opacity: 1;
-        pointer-events: auto;
-        width: auto;
-        flex-direction: row;
-    }
+  .menu {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    width: auto;
+    flex-direction: row;
+  }
 
-    .menu a{
-        padding: 0 1rem;
-    }
+  .menu a {
+    padding: 0 1rem;
+  }
 
-    .menu a:hover {
-        background-color: transparent;
-    }
+  .menu a:hover {
+    background-color: transparent;
+  }
 
-    .menu a:last-child {
-        padding-right: 0;
-      }
+  .menu a:last-child {
+    padding-right: 0;
+  }
 }
 
 /* ***** Modal ***** */
 .modal {
   position: fixed;
-  z-index: 999; 
+  z-index: 999;
   top: 0;
   bottom: 0;
   left: 0;
@@ -314,7 +322,7 @@ code {
 .modal-close svg {
   width: 3rem;
   height: 3rem;
-  fill: var(--first-color)
+  fill: var(--first-color);
 }
 
 .modal[id|="trabajo"]:target {
@@ -336,16 +344,16 @@ code {
 }
 
 .btn {
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-top: 1.5rem;
-    display: inline-block;
-    width: 200px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: var(--text-color);
-    background-color: var(--first-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  display: inline-block;
+  width: 200px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  background-color: var(--first-color);
 }
 
 .btn:hover {
@@ -379,7 +387,7 @@ code {
   border-bottom: thin solid var(--first-color);
   color: var(--title-color);
   margin: 2rem auto;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   width: 250px;
 }
@@ -420,8 +428,8 @@ code {
 }
 
 /* ****** Site Styles ****** */
-.about > article {
-  margin-bottom: 2rem; 
+.about > .about-text {
+  margin-bottom: 2rem;
   align-self: center;
 }
 
@@ -436,7 +444,7 @@ code {
 }
 
 .contact-card {
-  margin: 1rem auto; 
+  margin: 1rem auto;
   padding: 1rem;
   width: 100%;
   height: 23vh;
@@ -448,7 +456,7 @@ code {
 }
 
 .contact-card h3 {
-  font-size: 0.85rem
+  font-size: 0.85rem;
 }
 
 .contact-card > svg {
@@ -462,7 +470,7 @@ code {
 }
 
 .footer {
-  margin-bottom: var(--header-height); 
+  margin-bottom: var(--header-height);
   padding: 0.5rem;
   text-align: center;
   color: var(--white-color);
@@ -520,7 +528,7 @@ code {
   width: 100%;
   height: auto;
   padding: 1rem;
-  color: var(--second-color); 
+  color: var(--second-color);
   text-align: center;
   opacity: 0;
   pointer-events: none;
@@ -534,13 +542,13 @@ code {
 
 .portfolio-card-info > div {
   padding: 1rem;
-  border: thick  solid var(--second-color);
+  border: thick solid var(--second-color);
   width: 100%;
   height: 100%;
 }
 
 .portfolio-modal {
-  background-color: var(--white-color); 
+  background-color: var(--white-color);
   padding: 1rem;
   max-width: 400px;
   display: grid;
@@ -549,8 +557,8 @@ code {
 
 .portfolio-modal h3 {
   border-bottom: medium solid var(--first-color);
-  padding: .5rem 0;
-  margin: 1rem auto
+  padding: 0.5rem 0;
+  margin: 1rem auto;
 }
 
 .portfolio-details {
@@ -560,7 +568,7 @@ code {
 }
 
 .portfolio-details h4 {
-  color: var(--first-color); 
+  color: var(--text-links);
 }
 
 .service-card {
@@ -568,7 +576,7 @@ code {
 }
 
 .service-card h3 {
-  color: var(--title-color);
+  color: var(--second-color);
   text-align: center;
 }
 
@@ -585,7 +593,7 @@ code {
 
 @media screen and (min-width: 768px) {
   .about {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(2, 45%);
     justify-content: space-around;
     align-content: center;
@@ -618,15 +626,15 @@ code {
 
   .portfolio-info {
     margin-left: 1rem;
-    align-self: center
+    align-self: center;
   }
 
   .skills {
-    background-color: #15cdca42;
+    background-color: var(--bg-color);
   }
 
   .skills-container {
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(2, 45%);
     justify-content: space-evenly;
     align-content: center;
@@ -638,16 +646,20 @@ code {
 }
 
 @media screen and (min-width: 1024px) {
-  .about > article {
+  .about > .about-text {
     margin-right: 2rem;
   }
-  
+
+  .about-text p {
+    font-size: 18px;
+  }
+
   .contact-cards {
     grid-template-columns: repeat(4, 24%);
   }
 
   .footer {
-    margin-bottom: 0; 
+    margin-bottom: 0;
   }
 
   .header {
@@ -665,4 +677,3 @@ code {
     grid-column: span 3;
   }
 }
-
