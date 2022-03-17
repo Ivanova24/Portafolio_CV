@@ -571,6 +571,10 @@ code {
   color: var(--text-links);
 }
 
+.skills {
+ background-color: var(--bg-color);
+}
+
 .service-card {
   padding: 1rem;
 }
@@ -627,10 +631,6 @@ code {
   .portfolio-info {
     margin-left: 1rem;
     align-self: center;
-  }
-
-  .skills {
-    background-color: var(--bg-color);
   }
 
   .skills-container {
